@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "name": "Course"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "lessons": {
+      "type": "dynamiczone",
+      "components": [
+        "lesson.slide-lesson",
+        "lesson.video-lesson"
+      ]
+    },
+    "meta": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tags.meta"
+    }
+  }
+}

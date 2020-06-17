@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_lesson_slide_lessons",
+  "info": {
+    "name": "SlideLesson",
+    "icon": "pager"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}
